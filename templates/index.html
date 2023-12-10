@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distributed Energy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>ML Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="SystemSize">System Size (KWp):</label>
+        <input type="text" name="SystemSize" required>
+
+        <label for="EBTariff">EB Tariff (RS/kwh):</label>
+        <input type="text" name="EBTariff" required>
+
+        <label for="GenerationEfficiency">Generation Efficiency:</label>
+        <input type="text" name="GenerationEfficiency" required>
+
+        <label for="SystemCost">System Cost:</label>
+        <input type="text" name="SystemCost" required>
+
+        <label for="AssetManagementCost">Asset Management Cost (INR/kwp):</label>
+        <input type="text" name="AssetManagementCost" required>
+
+        <label for="CommissionInTime">Commission In Time (Y):</label>
+        <input type="text" name="CommissionInTime" required>
+
+        <label for="PPATenure">PPA Tenure (Y):</label>
+        <input type="text" name="PPATenure" required>
+
+        <label for="IRR">IRR:</label>
+        <input type="text" name="IRR" required>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
